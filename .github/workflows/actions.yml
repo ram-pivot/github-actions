@@ -11,6 +11,12 @@ jobs:
         run: |
           pwd
           ls
+          echo $GITHUB_SHA
+          echo $GITHUB_REPOSITORY
+          echo $GITHUB_WORKSPACE
+          env | grep GITHUB
+          git clone git@github:$GITHUB_REPOSITORY
+          git checkout $GITHUB_SHA
       - name: Checkout action
         uses: actions/checkout@v1
       - name: List files after checkout 
