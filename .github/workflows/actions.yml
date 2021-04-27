@@ -15,7 +15,7 @@ jobs:
           echo $GITHUB_REPOSITORY
           echo $GITHUB_WORKSPACE
           env | grep GITHUB
-          git clone https://$GITHUB_TOKEN@github.com/${GITHUB_REPOSITORY}.git
+          git clone https://$GITHUB_TOKEN@github.com/ram-pivot/github-actions.git
           git checkout $GITHUB_SHA
       - name: Checkout action
         uses: actions/checkout@v1
